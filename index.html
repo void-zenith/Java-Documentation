@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Technical documentation
+        </title>
+        <meta content="document" author="Zenith Rajbhandari">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/styles.css" type="text/css" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </head>
+
+    <body>
+        <div>
+            <!---navbar-->
+            <nav id="navbar">
+                <header><h1>Java</h1></header>
+                <ul class="nav-list">
+                    <a class="nav-link" href="#introduction_to_java"><li class="nav-item">Introduction to Java</li></a>
+                    <a class="nav-link" href="#getting_started"><li class="nav-item">Getting Started</li></a>
+                    <a class="nav-link" href="#hello_world"><li class="nav-item">Hello World</li></a>
+                    <a class="nav-link" href="#variables"><li class="nav-item">Variables</li></a>
+                    <a class="nav-link" href="#primitive_operator"><li class="nav-item">Primitive Operator</li></a>
+                    <a class="nav-link" href="#strings"><li class="nav-item">Strings</li></a>
+                    <a class="nav-link" href="#conditional_statements"><li class="nav-item">Conditional statements</li></a>
+                    <a class="nav-link" href="#loops"><li class="nav-item">Loops</li></a>
+                    <a class="nav-link" href="#arrays"><li class="nav-item">Arrays</li></a>
+                    <a class="nav-link" href="#arraylist"><li class="nav-item">Arraylist</li></a>
+                    <a class="nav-link" href="#multidimensional_arrays"><li class="nav-item">Multidimensional Arrays</li></a>
+                    <a class="nav-link" href="#methods"><li class="nav-item">Methods</li></a>
+                    <a class="nav-link" href="#reference"><li class="nav-item">Reference</li></a>
+                </ul>
+            </nav>
+        </div>
+        <!--end navbar-->
+        <!--main doc-->
+        <main id="main-doc">
+            <!--introduction to java-->
+            <section class="main-section" id="introduction_to_java">
+                <header><h2>Introduction to Java</h2></header>
+                <div class="description">
+                    <p>Java is a high level, modern programming language designed in the early 1990s by Sun Microsystems, and currently 
+                        owned by oracle.</p>
+                    <p>Java is a Platform Independent, which means that you only need to write the program once to be able to run it on a 
+                        number of platforms!</p>
+                    <p>Java is portable, robust, and dynamic, with the ability to fit the needs of virtually any type of application.
+                        More than 3 billion devices run Java. Java is used to develop apps for Google's Android OS, various Desktop Applications,
+                        such as media players, antivirus programs, Web Applications, Enterprise Applications (i.e. banking), and many more!
+                    </p>
+                </div>
+                <div class="second-description">
+                    <ul id="list-item">
+                        <h3>7 reasons why you should learn java</h3>
+                        <li>
+                            Java is the most in-demand programming language
+                        </li>
+                        <li>
+                            The sky's the limit for what you can build with java
+                        </li>
+                        <li>
+                            Java has deep community support
+                        </li>
+                        <li>
+                            Java has staying power
+                        </li>
+                        <li>
+                            Java is beginner-friendly
+                        </li>
+                        <li>
+                            Java gives you competitive advantage
+                        </li>
+                    </ul>
+                    <article>
+                        <i class='fas fa-thumbtack'></i>
+                        <em>Java gurantees that you'll be able to Write Once, Run Anywhere.</em><br>
+                        <i class='fas fa-thumbtack'></i>
+                        <em>Learn, practice and then join the huge community of java developers around the world!</em>
+                    </article>
+                </div>
+            </section>
+            <hr>
+            <!--end introduction to java-->
+            <!--getting started-->
+            <section class="main-section" id="getting_started">
+                <header><h2>Getting Started</h2></header>
+                <div class="description">
+                    <p>If you do not have Java installed on your computer, you can download it for free at <span><a class="link-text" href="https://www.oracle.com/java/technologies/javase-downloads.html">oracle.com</a>.</span></p>
+                    <h3>
+                        Setup for Windows
+                    </h3>
+                    <ol id="list-item">
+                        <h4>To install Java for Windows</h4>
+                        <li>First download the java, then install it.</li>
+                        <li>Go to "System Properties" (Can be found on Control Panel > System and Security > System > Advanced System Settings)</li>
+                        <li>Click on the "Environment variables" button under the "Advanced" tab</li>
+                        <li>Then, select the "Path" variable in System variables and click on the "Edit" button</li>
+                        <li>Click on the "New" button and add the path where Java is installed, followed by \bin. By default, Java is installed in
+                        C:\Program Files\Java\jdk-15.0.0 (If nothing else was specified when you installed it). In that case, You will have to
+                        add a new path with: C:\Program Files\Java\jdk-15.0.0\bin
+                        Then, click "OK", and save the settings
+                        </li>
+                        <li>At last, open Command Prompt (cmd.exe) and type java -version to see if Java is running on your machine
+                        </li>
+                    </ol>
+                    <figure>
+                        <h4>If Java is installed poperly then, you will see something like this (depending on version)</h4>
+                        <img src="./img/java-version.JPG" class="java-img" alt="java-version">
+                        <figcaption> Checking Java version.</figcaption>
+                    </figure>
+                    <p><Span class="bold-text">Note: </Span>In this tutorial, we will write Java code in a text editor. However, it is possible to write Java in an Integrated
+                        Development Environment, such as IntelliJ IDEA, Netbeans or Eclipse, which are particularly useful when managing larger
+                        collections of Java files.</p>
+                </div>
+            </section>
+            <!--end getting started-->
+            <!--hello world program-->
+            <hr>
+            <section class="main-section" id="hello_world">
+                <header><h2>Hello World</h2></header>
+                <div class="description">
+                    <p>Let's start by creating a simple program that prints "Hello Wolrd" to the screen.</p>
+                    <p>In Java, every application begins with a class name, and that class must match the filename.</p>
+                    <p>Let's create our first Java file, called Main.java, which can be done in any text editor (like Notepad).</p>
+                    <code class="code">public class Main{
+    public static void main(String [] args){
+        System.out.println("Hello World");
+    }
+}</code> 
+                    <p>Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. For now, focus on
+                    how to run the code above.
+                    </p>
+                    <p>Save the code in Notepad as "Main.java". Open Command Prompt (cmd.exe), navigate to the directory where you saved your
+                    file, and type "javac Main.java":</p>
+                    <code class="code">C:\Users\Your Name>javac Main.java</code>
+                    <p>This will compile your code. If there are no errors in the code, the command pormpt will take you
+                        to the next line. Now,type "java Main" to run the file:
+                    </p>
+                    <code class="code">C:\Users\Your Name>java Main</code>
+                    <p>The output should read:</p>
+                    <code class="code output">Hello World</code>
+                </div>
+            </section>
+            <!--end hello world program-->
+            <!--variables-->
+            <section class="main-section" id="variables">
+                <header><h2>Variables</h2></header>
+                <div class="description">
+                    <p>Variable are containers for storing data values.</p>
+                    <ul id="list-item">
+                        <h4>In Java, there are different types of variables, for example:</h4>
+                        <li>
+                            <span class="bold-text">String</span> - stores text, such as "Hello". 
+                            String valuess are surrounded by double quotes.
+                        </li>
+                        <li>
+                            <span class="bold-text">int</span> - stores integers (whole numbers), without decimals, such as 123 or -123.
+                        </li>
+                        <li>
+                            <span class="bold-text">float</span> - stores floating point numbers, with decimals, such as 19.99 or -19.99.
+                        </li>
+                        <li>
+                            <span class="bold-text">char</span> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes.
+                        </li>
+                        <li>
+                            <span class="bold-text">boolean</span> - stores values with two states: true or false.
+                        </li>
+                    </ul>
+                    <h3>Declaring Variables</h3>
+                    <h4>Syntax</h4>
+                    <p>To create a variabl, you must specify the tyupe and assign it a value:</p>
+                    <code class="code">type variableName = value; </code>
+                    <h4>Example</h4>
+                    <p>Create a variable called name of type String and assign it the value "John":</p>
+                    <code class="code">String name="John";
+System.out.println(name);</code>
+                    <h4>Output:</h4>
+                    <code class="code output">John</code>
+                    <h4>Example</h4>
+                    <p>Create a variable called myNum of type int and assign it the value of 9:</p>
+                    <code class="code">int myNum=9;
+System.out.println(myNum)</code>
+                    <h4>Output:</h4>
+                    <code class="code output">9</code>
+                </div>
+                <article class="center-article">
+                    <i class='fas fa-thumbtack'></i>
+                    <em>You can use a comma-seperated list to declare more than one variable of the specified type. Example: int a=21,b=2;</em>
+                </article>
+            </section>
+            <!--end variables-->
+            <hr>
+            <!--primitive operator-->
+            <section class="main-section" id="primitive_operator">
+                <header><h2>Primitive Operator</h2></header>
+                <div class="description">
+                    <p>Java provides a rich set of operators to use in manipulating variables. A value
+                        used on either side of an operator is called an operand.
+                    </p>
+                    <p>For example, int the expression below, the numbers 8 and 5 are operands
+                        of the plus operator.
+                    </p>
+                    <code class="code">int x = 8 + 5;</code>
+                    <div class="second-description">
+                        <ul id="list-item">
+                            <h3>Java arithmetic operators: </h3>
+                            <li> <span class="bold-text"> + </span> addition</li>
+                            <li> <span class="bold-text"> - </span> subtraction</li>
+                            <li> <span class="bold-text"> * </span> multiplication</li>
+                            <li> <span class="bold-text"> / </span> division</li>
+                            <li> <span class="bold-text"> % </span> modulo</li>
+                            <li> <span class="bold-text"> ++ </span> Increment</li>
+                            <li> <span class="bold-text"> % </span> Decrement</li>
+                        </ul>
+                        <article>
+                            <i class='fas fa-thumbtack'></i>
+                            <em>Arithmetic operators are used in mathematical expressions in the same way that they 
+                                are used in algebric equations.
+                            </em>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!--end primitive operator-->
+            <hr>
+            <!--Strings-->
+            <section class="main-section" id="strings">
+                <header><h2>Strings</h2></header>
+                <div class="description">
+                    <p>Strings are used for storing text.</p>
+                    <p>A <span class="bold-text">String</span> variable contains a collection of characters 
+                    surrounded by double quotes:</p>
+                    <h4>Create a variable of type <span class="bold-text">String</span> and assign it a value:</h4>
+                    <code class="code">String greeting="Hello";</code>
+                    <h3>String length</h3>
+                    <p>A String in Java is actually an object, which contains methods that can perform certain
+                        on strings. For example, the length of a string can be found with the <span class="bold-text">length()</span>method:
+                    </p>
+                    <h4>Example:</h4>
+                    <code class="code">String txt = "asdfasf asdafasdfa asdf";
+System.out.println("Length: " + txt.length());</code>
+                    <h3>More String methods</h3>
+                    <p>There are many string methods availabe, for example <span class="bold-text">toUpperCase()</span> and <span class="bold-text">toLowerCase()</span>:</p>
+                    <h4>Example:</h4>
+                    <code class="code">String txt="Hello I am a Robot";
+System.out.println(txt.toUpperCase());
+System.out.println(txt.toLowerCase());</code>
+                    <h4>Output:</h4>
+                    <code class="code output">HELLO I AM A ROBOT
+hello i am a robot</code>
+                    <h3>Finding a Character in a String</h3>
+                    <p>The <span class="bold-text">indexOf()</span> method return the index(the position) of tje first occurrence
+                    of a specified text in a string(including whitespace):</p>
+                    <h4>Example:</h4>
+                    <code class="code">String txt = "This is my clone website for java documentation.";
+System.out.println(txt.indexOf("clone"));</code>
+                    <h4>Output:</h4>
+                    <code class="code output">6</code>
+                    <h3>String Concatenation</h3>
+                    <p>The <span class="bold-text"> + </span> operator can be used between strings to combine them. This is called
+                    <span class="bold-text">concatention</span>:</p>
+                    <h4>Example:</h4>
+                    <code class="code">String firstName = "John";
+String lastName="Doe";
+System.out.println(firstName + " " + lastName);</code>
+                    <h4>Output:</h4>
+                    <code class="code output">John Doe</code>
+                    <article class="center-article">
+                        <i class='fas fa-thumbtack'></i>
+                        <em>You can also use the <span class="bold-text">concat()</span> method to concatenate two strings:</em>
+                    </article>
+                    <h4>Example:</h4>
+                    <code class="code">String firstName="Zenith";
+String lastName="Rajbhandari";
+System.out.println(firstName.concat(lastName));</code>
+                    <h4>Output:</h4>
+                    <code class="code output">ZenithRajbhandari</code>
+                </div>
+            </section>
+            <!--end strings-->
+            <hr>
+            <!--conditional statement-->
+            <Section class="main-section" id="conditional_statements">
+                <header><h2>Conditional statements</h2></header>
+                <div class="description">
+                    <p>Conditional statements are used to perform different actions based on different conditions.</p>
+                    <p>The <span class="bold-text">if..else statement</span> is one of the most frequently used conditional statements.</p>
+                    <p>If the if statement's condition expression evaluates to true, the block of code inside the if statemetnt is executed. If the expression is found to be false, the
+                        first set of code after the end of the if statement (after closing curly brace) is executed.
+                    </p>
+                    <div class="second-description">
+                        <ul id="list-item">
+                            <h3>Comparison Operators: </h3>
+                            <li>&lt less than</li>
+                            <li>%gt grater than</li>
+                            <li>!= not equal to</li>
+                            <li>== equal to</li>
+                            <li>&lt= less than or equal to</li>
+                            <li>=&gt greater than or equal to</li>
+                        </ul>
+                        <article >
+                            <i class='fas fa-thumbtack'></i>
+                            <em>Remeber to use two equal signs(==) to test for equality, since a single equal sign is the assignment operator.</em>
+                        </article>
+                    </div>
+                </div>
+            </Section>
+            <!--end conditional statement-->
+            <hr>
+            <!--loops-->
+            <section class="main-section" id="loops">
+                <header><h2>Loops</h2></header>
+                <div class="description">
+                    <p>In computer programming, loops are used to repeat a block of code. For example, if you want to show a message 100 times, then rather
+                        than typing the same code 100 times, you can use a loop.
+                    </p>
+                    <ul id="list-item">
+                        <h3>In java there are three types of loops:</h3>
+                        <li>for loop</li>
+                        <li>while loop</li>
+                        <li>do...while loop</li>
+                    </ul>
+                    <h3>Java for loop</h3>
+                    <p>Java <span class="bold-text">for</span> loop is used to run a block of code for a ceratin number of times. 
+                    The syntax of <span class="bold-text">for</span> loop is:</p>
+                    <code class="code">for(initialExpression; testExpression; updateExpression){<span class="comment-code">
+//body of the loop</span>
+}</code>
+                    <p><span class="bold-text">initialExpression</span> is executed (one time) before the execution of the code block.</p>
+                    <p><span class="bold-text">textExpression</span> defines the condition for executing the code block.</p>
+                    <p><span class="bold-text">updateExpression</span> is executed (every time) after the code block has been executed.</p>
+                    <h4>Example:</h4>
+                    <code class="code">for(int i = 0; 1&lt5;i++){
+    System.out.println(i);
+}</code>
+                    <h4>Output:</h4>
+                    <code class="code output">0
+1
+2
+3
+4</code>
+                    <h3>Java While loop</h3>
+                    <p>The <span class=""bold-text">while</span> loop loops through a block of code as long as a specified condition is 
+                    <span class="bold-text">true</span>:</p>
+                    <h4>Syntax:</h4>
+                    <code class="code">while(condition){
+<span class="comment-code">//code block to be executed</span>
+}</code>
+                    <h4>Example:</h4>
+                    <code class="code">int i =0;
+while(i&lt5);{
+    System.out.println(i);
+    i++;
+}</code>
+                    <h4>Output:</h4>
+                    <code class="code output">0
+1
+2
+3
+4</code>
+                    <h3>Java Do/While Loop</h3>
+                    <p>The <span class="bold-text">do/while</span> loop is a variant of <span class="bold-text">while</span> loop. This
+                    loop will execute the code blocl once, before checking of the condition is true, then it will repeat the loop as long as the 
+                    condition is true.</p>
+                    <h4>Syntax</h4>
+                    <code class="code">do{
+<span class="comment-code">  //code block to be executed</span>
+}
+while(condition);</code>
+                    <h4>Example:</h4>
+                    <code class="code">int i =0;
+do{
+    System.out.println(i);
+    i++;
+}
+while (i&lt5);</code>
+                </div>
+            </section>
+            <!--end loops-->
+            <hr>
+            <!--arrays-->
+            <section class="main-section" id="arrays">
+                <header><h2>Arrays</h2></header>
+                <div class="description">
+                    <p>Arrays are used to store multiple values in a single variable, instead of declaring seperate variable for each value.</p>
+                    <p>To declare an array, define the variable type with square brackets("[]").</p>
+                </div>
+                <h4>Syntax:</h4>
+                <code class="code">String [] cars = {"Volvo","BMW","Ford","Mazda"};
+int [] number = {1, 2, 3, 4};</code>
+                <h3>Access the elements of an array</h3>
+                <p>You access an array element by referring to the index number.</p>
+                <code class="code">String [] cars = {"Volvo","BMW","Ford","Mazda"};
+System.out.println(cars[1]);</code>
+                <h4>Output:</h4>
+                <code class="code output">BMW</code>
+                <article class=" center-article">
+                    <i class='fas fa-thumbtack'></i>
+                    <em>Arrays indexes start with 0: [0] is the first element. [1] is the second element and so on..</em>
+                </article>
+                <h3>Change an array element</h3>
+                <p>To change the value of a specified element, refer to the index number:</p>
+                <h4>Example:</h4>
+                <code class="code">String [] cars = {"Volvo","BMW","Ford","Mazda"};
+System.out.println("Before changing:" + cars[0]);
+cars[0]="Audi";
+System.out.println("After changing:" + cars[0]);</code>
+
+                <h4>Output:</h4>
+                <code class="code output">Before changing:Volvo
+After changing:Audi</code>
+                <h3>Array length</h3>
+                <p>To find out how many elements an array has, use the <span class="bold-text">length</span> property:</p>
+                <h4>Example:</h4>
+                <code class="code">String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);</code>
+                <h4>Output:</h4>
+                <code class="code output">4</code>
+                <h3>Loop through an Array using For-Each</h3>
+                <p>There is a <span class="bold-text">"for-each"</span> loop, which is used exclusively to loop
+                through elements in arrays:</p>
+                <h4>Example:</h4>
+                <code class="code">String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for(String i: cats){
+    System.out.println(i);
+}</code>
+                <h4>Output:</h4>
+                <code class="code output">Volvo
+BMW
+Ford
+Mazda</code>
+            </section>
+            <!--end arrays-->
+            <hr>
+            <!--arraylist-->
+            <section class="main-section" id="arraylist">
+                <header><h2>Arraylist</h2></header>
+                <div class="description">
+                    <p>The <span class="bold-text">Arraylist</span> class is a resizable <a href="#arrays" style="color: black;">array</a>, which can be found in the <span class="bold-text">java.util</span> package.</p>
+                    <p>The difference between a built-in array and an <span class="bold-text">Arraylist</span> in Java, is that the size of an array cannot be modified
+                    (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and remover from an 
+                    <span class="bold-text">Arrraylist</span> whenever you want.
+                    </p>
+                    <h3>Create an Arraylist:</h3>
+                    <code class="code">import java.util.ArrayList;<span class="comment-code">import the Arraylist class</span>
+Arraylist&ltStrings&gt cars= new Arraylist&ltString&gt();</code>
+                    <h3>Add items</h3>
+                    <p>The <span class="bold-text">Arraylist</span> has many useful methods. For example, to add elements to the 
+                    <span class="bold-text">Arraylist</span>,use the <span class="bold-text">add()</span> method:</p>
+                    <code class="code">import java,util.Arraylist;
+public class Main{
+    public Static void main(String [] args){
+        Arraylist &ltString&gt cars = new Arraylist&ltString&lt();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Audi");
+        System.out.println(cars);
+    }
+}</code>
+                    <h3>Access an item</h3>
+                    <p>To access an element in the <span class="bold-text">Arraylist</span>,use the <span class="bold-text">get()</span> method and refer to the index number:</p>
+                    <code class="code">cars.get(0);</code>
+
+                    <h3>Change an item</h3>
+                    <p>To modufy an element, use the <span class="bold-text">set()</span> method and refer to the index number:</p>
+                    <code class="code">cars.set(0,"Ferrari");</code>
+
+                    <h3>Remove an item</h3>
+                    <p>To remove an element, use the <span class="bold-text">remove()</span> method an refer to the index number:</p>
+                    <code class="code">cars.remove(0);</code>
+
+                    <h3>ArrayList Size</h3>
+                    <p>To find out how many elements an arraylist have, use the <span class="bold-text">size</span> method.</p>
+                    <code class="code">cars.size();<span class="comment-code"> //output is 3</span></code>
+                </div>
+            </section>
+            <!--end arraylist-->
+            <hr>
+            <!--multidimensional Arrays-->
+            <section class="main-section" id="multidimensional_arrays">
+                <header><h2>Multidimensional Arrays</h2></header>
+                <div class="description">
+                    <p>A multidimensional array is an array containing one or more arrays.</p>
+                    <p>To create multidimensional arrays, place each <a href="#arrays" style="color: black;">array</a> within its own set of sqaure brackcets.</p>
+                    <h4>Example:</h4>
+                    <code class="code">int[][] num = {{1,2,3},{4,5,6}};</code>
+                    <p>To access the elements of num array, specify two indexes: one for the array, and one for the element inside that array.</p>
+                    <h4>Example:</h4>
+                    <code class="code">int[][]num={{1,2,3},{4,5,6}}
+int x= num[1][0];
+System.out.println(x);</code>
+                    <h4>Output:</h4>
+                    <code class="code output">4</code>
+                </div>
+            </section>
+            <!--end multidimensional Arrays-->
+            <hr>
+            <!--methods-->
+            <section class="main-section" id="methods">
+                <header><h2>Methods</h2></header>
+                <div class="description">
+                    <p>A <span class="bold-text">method</span> is a block of code which only runs when it is called.</p>
+                    <p>You can pass data, known as parameters, into a method.</p>
+                    <p>Methods are used to perform certain actions, and they are also known as functions.</p>
+                    <h3>Create a Method</h3>
+                    <p>A method must be declared within a class. It is defined with the name of the method, followed by parentheses(). Java provides some
+                        pre-defined methods, such as <span class="bold-text">System.out.println()</span>, but you can also create your own methods perform 
+                        certain actions:
+                    </p>
+                    <h4>Syntax:</h4>
+                    <code class="code">Public class Main{
+    static void meth(){
+        <span class="comment-code">// code to be executed</span>
+    }
+}</code>
+                    <h3>Call a method:</h3>
+                    <p>To call a method in Java, write the method's name followed by two parentheses() and semicolon;</p>
+                    <h4>Example:</h4>
+                    <code class="code">Public class Main{
+    static void meth(){
+        System.out.println("Hello World!");
+    }
+    public static void main (String [] args){
+        meth();
+    }
+}</code>            
+                    <h4>Output:</h4>    
+                    <code class="code output">Hello World!</code>
+                </div>
+            </section>
+            <!--end methods-->
+            <hr>
+            <!--reference-->
+            <section class="main-section" id="reference">
+                <header><h2>Reference</h2></header>
+                <div class="description">
+                    <ul id="list-item">
+                        <li>All the documentation in this page is taken from <a href="https://www.w3schools.com/java/" style="color: black;">w3schools.com</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!--end reference-->
+
+        </main>
+    </body>
+</html>
